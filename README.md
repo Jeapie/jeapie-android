@@ -10,6 +10,7 @@ jeapie-android
 
 ```ruby
 dependencies {
+    compile files('libs/jeapie_sdk_v*.*.jar')
     compile 'com.google.android.gms:play-services:4.+'
 }
 ```
