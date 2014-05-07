@@ -47,8 +47,8 @@ dependencies {
 
 ```java
 
-    private final statis String SENDER_ID = "GCM_SENDER_ID";
-    private final statis String TAG = "example";
+    private final static String SENDER_ID = "GCM_SENDER_ID";
+    private final static String TAG = "example";
     NotificationManager mNotificationManager;
     private GoogleCloudMessaging mGcm;
     
