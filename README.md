@@ -144,9 +144,6 @@ dependencies {
     
     /**
      * Registers the application with GCM servers asynchronously.
-     * <p>
-     * Stores the registration ID and app versionCode in the application's
-     * shared preferences.
      */
     private void registerBackground() {
         new AsyncTask() {
