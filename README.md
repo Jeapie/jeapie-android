@@ -1,7 +1,7 @@
 jeapie-android
 ==============
 
-> <b>WARNING!</b> Jeapie sdk is only for <b>Android version 14+</b>
+> <b>WARNING!</b> Jeapie sdk is only for <b>Android version 14+ (4.0.0+)</b>
 
 #### Installation instructions for Jeapie sdk
 
