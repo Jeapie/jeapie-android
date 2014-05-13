@@ -7,6 +7,7 @@ jeapie-android
 
 > Please, before you install sdk read documentation about android push notification:
 > http://developer.android.com/google/gcm/gcm.html
+
 > http://developer.android.com/google/gcm/gs.html
 >
 > Also you need to understand the programming language <b>Java</b> and <b>Android</b> development
