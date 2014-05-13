@@ -11,13 +11,15 @@ jeapie-android
 >
 > Also you need to understand the programming language <b>Java</b> and <b>Android</b> development
 
-##### First part (Get android keys)
+---
+
+#### First part (Get android keys)
 
 * You must take GCM sender ID (<b>GCM_SENDER_ID</p>) and <b>GCM API KEY</b> from https://cloud.google.com/console
 
 > Detail information look on http://developer.android.com/google/gcm/gs.html
 
-##### Second part (Create account in Jeapie)
+#### Second part (Create account in Jeapie)
 
 
 * You must register in service Jeapie https://app.jeapie.com/register
@@ -25,7 +27,7 @@ jeapie-android
 * Copy file jeapie_sdk_v*.*.jar into dir libs in android project
 * In Setting -> Push settings you need paste your <b>GCM API KEY</b>
 
-##### Third part (Setting Jeapie in Android project)
+#### Third part (Setting Jeapie in Android project)
 
 * In build.gradle add dependencies
   * Jeapie *.jar lib
