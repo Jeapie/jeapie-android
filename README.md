@@ -1,32 +1,32 @@
 jeapie-android
 ==============
 
-> <b>WARNING!</b> Jeapie sdk only for <b>Android version 14+</b>
+> <b>WARNING!</b> Jeapie sdk is only for <b>Android version 14+</b>
 
-#### Instructions for install Jeapie sdk
+#### Installation instructions for Jeapie sdk
 
-> Please, before you install sdk read documentation about android push notification:
+> Please, before you install sdk make sure that you are familiar with documentation about android push notification:
 > http://developer.android.com/google/gcm/gcm.html
 
 > http://developer.android.com/google/gcm/gs.html
 >
-> Also you need to understand the programming language <b>Java</b> and <b>Android</b> development
+> Also you need to understand the basics of <b>Java</b> programming language and <b>Android</b> mobile development
 
 ---
 
 #### First part (Get android keys)
 
-* You must take GCM sender ID (<b>GCM_SENDER_ID</p>) and <b>GCM API KEY</b> from https://cloud.google.com/console
+* You have to take GCM sender ID (<b>GCM_SENDER_ID</p>) and <b>GCM API KEY</b> from https://cloud.google.com/console
 
-> Detail information look on http://developer.android.com/google/gcm/gs.html
+> Look on http://developer.android.com/google/gcm/gs.html for details
 
 #### Second part (Create account in Jeapie)
 
 
-* You must register in service Jeapie https://app.jeapie.com/register
-* Copy your <b>APP_KEY</b> and <b>APP_SECRET</b> from Settings -> Api keys
+* You should register in Jeapie service  https://app.jeapie.com/register
+* Copy your <b>APP_KEY</b> and <b>APP_SECRET</b> from Settings -> Api keys (In Jeapie Dashboard)
 * Copy file jeapie_sdk_v*.*.jar into dir libs in android project
-* In Setting -> Push settings you need paste your <b>GCM API KEY</b>
+* In Settings -> Push settings you need paste your <b>GCM API KEY</b> (In Jeapie Dashboard)
 
 #### Third part (Setting Jeapie in Android project)
 
@@ -40,10 +40,10 @@ dependencies {
     compile 'com.google.android.gms:play-services:4.+'
 }
 ```
-> For <b>Eclipse</b> please look in android docs http://developer.android.com/google/play-services/setup.html
+> If you are using <b>Eclipse</b> please take a look http://developer.android.com/google/play-services/setup.html
 
 
-* Add to manifest permissions and replace <b>YOUR_PACKAGE_NAME</b> (example com.example.app) in fourth places
+* Add to manifest permissions and replace <b>YOUR_PACKAGE_NAME</b> (example com.example.app) in four places
 
 ```xml
 <manifest package="YOUR_PACKAGE_NAME" ...>
@@ -166,4 +166,4 @@ dependencies {
         }.execute(null, null, null);
     }
 ```
-> For detail information look on http://developer.android.com/google/gcm/client.html
+> For more detailed information visit http://developer.android.com/google/gcm/client.html
