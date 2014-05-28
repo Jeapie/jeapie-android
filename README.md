@@ -43,7 +43,8 @@ dependencies {
 > If you are using <b>Eclipse</b> please take a look http://developer.android.com/google/play-services/setup.html
 
 
-* Add to manifest permissions and replace <b>YOUR_PACKAGE_NAME</b> (example com.example.app) in four places
+* Add to manifest permissions and replace <b>YOUR_PACKAGE_NAME</b> (example com.example.app) in four places 
+and replace JEAPIE_APP_KEY, JEAPIE_APP_SECRET on your value
 
 ```xml
 <manifest package="YOUR_PACKAGE_NAME" ...>
@@ -60,6 +61,12 @@ dependencies {
 
     <uses-sdk android:minSdkVersion="14"/>
     <application ...>
+        <meta-data
+            android:name="com.jeapie.key"
+            android:value="JEAPIE_APP_KEY" />
+        <meta-data
+            android:name="com.jeapie.secret"
+            android:value="JEAPIE_APP_SECRET" />
         <receiver android:name="com.jeapie.GCMReceiver">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
@@ -73,15 +80,13 @@ dependencies {
 </manifest>
 ```
 
-* In launch activity add next code and replace GCM_SENDER_ID, JEAPIE_APP_KEY, JEAPIE_APP_SECRET on your value
+* In launch activity add next code and replace GCM_SENDER_ID on your value
 
 ```java
 
     // GCM Sender ID
     private final static String SENDER_ID = "GCM_SENDER_ID";
     private final static String TAG = "example";
-    NotificationManager mNotificationManager;
-    private GoogleCloudMessaging mGcm;
     
     
     @Override
@@ -89,81 +94,14 @@ dependencies {
         super.onCreate(savedInstanceState);
 
         // init Jeapie service
-        JeapieAPI.init(this, "JEAPIE_APP_KEY", "JEAPIE_APP_SECRET");
+        JeapieAPI.init(this);
         
-        // register push handler for handling push notifications
-        JeapieAPI.getInstance().registerPushListener(new Pusher());
-
-        // Init GCM service
-        mGcm = GoogleCloudMessaging.getInstance(getApplicationContext());
-
         // Get GCM token asynchronously in background
-        registerBackground();
+        JeapieAPI.getInstance().registerTokenInBackground(this, SENDER_ID);
+
 
         setContentView(R.layout.main);
     }
     
-    // implementation push handler for handling push notification
-    // Android push notification is only text information from server. 
-    // Text is not displaing for user. You must use "sendNotification" method
-    class Pusher implements PushListener {
-        @Override
-        public void onPush(Intent intent)
-        {
-            // Get text from push notification with key "message"
-            String message = intent.getExtras().getString("message");
-
-            if (message != null) {
-                // Display text for user
-                sendNotification(message);
-            }
-        }
-    }
-    
-    // Put the message into a notification and post it.
-    // This is just one simple example of what you might choose to do with
-    // a GCM message.
-    private void sendNotification(String msg) {
-        mNotificationManager = (NotificationManager)
-                this.getSystemService(Context.NOTIFICATION_SERVICE);
-
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, MyActivity.class), 0);
-
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.common_signin_btn_icon_dark)
-                        .setContentTitle("GCM Notification")
-                        .setStyle(new NotificationCompat.BigTextStyle()
-                                .bigText(msg))
-                        .setContentText(msg);
-
-        mBuilder.setContentIntent(contentIntent);
-        mNotificationManager.notify("NOTIFICATION_ID", mBuilder.build());
-    }
-    
-    
-    /**
-     * Registers the application with GCM servers asynchronously.
-     */
-    private void registerBackground() {
-        new AsyncTask() {
-            @Override
-            protected Object doInBackground(Object[] objects) {
-                String msg = "";
-                try {
-                    if (mGcm == null) {
-                        mGcm = GoogleCloudMessaging.getInstance(getApplicationContext());
-                    }
-                    String regid = mGcm.register(SENDER_ID);
-                    msg = "Device registered, registration id=" + regid;
-
-                } catch (IOException ex) {
-                    msg = "Error :" + ex.getMessage();
-                }
-                return msg;
-            }
-        }.execute(null, null, null);
-    }
 ```
 > For more detailed information visit http://developer.android.com/google/gcm/client.html
