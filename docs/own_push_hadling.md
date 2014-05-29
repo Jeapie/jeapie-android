@@ -1,4 +1,4 @@
-Own Push hadling
+Own Push handler
 ================
 
 1. Create class extend from <b>com.jeapie.GCMReceiver</b> and override method 
