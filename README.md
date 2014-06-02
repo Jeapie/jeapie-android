@@ -16,3 +16,4 @@ jeapie-android
 
 * [Getting started](https://github.com/Jeapie/jeapie-android/blob/master/docs/getting_started.md)
 * [Create own push handler](https://github.com/Jeapie/jeapie-android/blob/master/docs/own_push_handler.md)
+* [Commands](https://github.com/Jeapie/jeapie-android/blob/master/docs/commands.md)
