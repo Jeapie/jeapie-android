@@ -13,9 +13,9 @@ Getting started
 * You should register in Jeapie service  https://app.jeapie.com/register
 * Copy your <b>APP_KEY</b> and <b>APP_SECRET</b> from Settings -> Api keys (In Jeapie Dashboard)
 * Copy file jeapie_sdk_v*.*.jar into dir libs in your android project
-* In Jeapie dashboard -> Settings -> Push settings you need paste your <b>GCM API KEY</b>
+* In Jeapie dashboard -> Settings -> Push settings you need to paste your <b>GCM API KEY</b>
 
-#### Third part (Setting Jeapie in Android project)
+#### Third part (Setting up Jeapie in Android project)
 
 * In build.gradle add dependencies
   * Jeapie *.jar lib
@@ -27,11 +27,11 @@ dependencies {
     compile 'com.google.android.gms:play-services:4.+'
 }
 ```
-> If you are using <b>Eclipse</b> please take a look http://developer.android.com/google/play-services/setup.html
+> If you are using <b>Eclipse</b> please take a look at http://developer.android.com/google/play-services/setup.html
 
 
 * Add to manifest permissions and replace <b>YOUR_PACKAGE_NAME</b> (example com.example.app) in four places 
-and replace JEAPIE_APP_KEY, JEAPIE_APP_SECRET on your value
+and replace JEAPIE_APP_KEY, JEAPIE_APP_SECRET with your values
 
 ```xml
 <manifest package="YOUR_PACKAGE_NAME" ...>
