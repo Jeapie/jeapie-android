@@ -67,7 +67,7 @@ and replace JEAPIE_APP_KEY, JEAPIE_APP_SECRET on your value
 </manifest>
 ```
 
-* In launch activity add next code and replace GCM_SENDER_ID on your value
+* In launch activity add next code and replace GCM_SENDER_ID with your value
 
 ```java
 
