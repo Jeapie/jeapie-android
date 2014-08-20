@@ -1,16 +1,16 @@
 jeapie-android
 ==============
 
-> <b>WARNING!</b> Jeapie sdk is only for <b>Android version 14+ (4.0.0+)</b>
+> <b>WARNING!</b> Jeapie SDK supports <b>Android version 14+ (4.0.0+)</b>
 
-#### Installation instructions for Jeapie sdk
+#### Installation instructions
 
-> Please, before you install sdk make sure that you are familiar with documentation about android push notification:
+> Please, make sure that you are familiar with android push notification docs: 
 > http://developer.android.com/google/gcm/gcm.html
 
 > http://developer.android.com/google/gcm/gs.html
 >
-> Also you need to understand the basics of <b>Java</b> programming language and <b>Android</b> mobile development
+> Also you have to understand the basics of <b>Java</b> programming language and <b>Android</b> mobile development
 
 ---
 
