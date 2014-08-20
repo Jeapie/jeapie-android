@@ -3,17 +3,17 @@ Getting started
 
 #### First part (Get android keys)
 
-* You have to take GCM sender ID (<b>GCM_SENDER_ID</p>) and <b>GCM API KEY</b> from https://cloud.google.com/console
+* You have to take GCM sender ID (<b>GCM_SENDER_ID</b>) and <b>GCM API KEY</b> from https://cloud.google.com/console
 
 > For more detailed information visit http://developer.android.com/google/gcm/gs.html
 
 #### Second part (Create account in Jeapie)
 
 
-* You should register in Jeapie service  https://app.jeapie.com/register
+* You should register Jeapie account  https://app.jeapie.com/register
 * Copy your <b>APP_KEY</b> and <b>APP_SECRET</b> from Settings -> Api keys (In Jeapie Dashboard)
 * Copy file jeapie_sdk_v*.*.jar into dir libs in your android project
-* In Jeapie dashboard -> Settings -> Push settings you need to paste your <b>GCM API KEY</b>
+* Paste your <b>GCM API KEY</b> in Jeapie Dashboard -> Settings -> Push settings 
 
 #### Third part (Setting up Jeapie in Android project)
 
@@ -30,7 +30,7 @@ dependencies {
 > If you are using <b>Eclipse</b> please take a look at http://developer.android.com/google/play-services/setup.html
 
 
-* Add to manifest permissions and replace <b>YOUR_PACKAGE_NAME</b> (example com.example.app) in four places 
+* Add permissions to manifest and replace <b>YOUR_PACKAGE_NAME</b> (example com.example.app) in four places 
 and replace JEAPIE_APP_KEY, JEAPIE_APP_SECRET with your values
 
 ```xml
@@ -67,7 +67,7 @@ and replace JEAPIE_APP_KEY, JEAPIE_APP_SECRET with your values
 </manifest>
 ```
 
-* In launch activity add next code and replace GCM_SENDER_ID with your value
+*  Add next code and replace GCM_SENDER_ID with your value in launch activity
 
 ```java
 
