@@ -3,6 +3,7 @@ jeapie-android
 
 > <b>WARNING!</b> Jeapie SDK supports <b>Android version 14+ (4.0.0+)</b>
 
+
 #### Installation instructions
 
 > Please, make sure that you are familiar with android push notification docs:
